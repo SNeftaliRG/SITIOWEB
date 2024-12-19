@@ -1,0 +1,39 @@
+/* CSS para el fondo del header */
+.navbar {
+    background-color: #1f6157;
+}
+
+/* Resaltar los botones al pasar el cursor */
+.navbar-nav .nav-link:hover {
+    color: #1f6157; /* Color al pasar el cursor */
+    text-decoration: underline; /* Subraya el texto */
+}
+
+/* Alinear los botones del nav a la derecha */
+.navbar-nav {
+    justify-content: right; /* Alinea los elementos del navbar a la derecha */
+}
+
+h5 {
+    text-align: justify;
+}
+
+/* Reducir el padding de la sección */
+.bg-success {
+    padding-top: 3rem;   /* Reduce el espacio superior */
+    padding-bottom: 3rem; /* Reduce el espacio inferior */
+}
+
+/* Reducir el padding de las columnas */
+.py-5 {
+    padding-top: 1rem; /* Reduce el espacio superior */
+    padding-bottom: 1rem; /* Reduce el espacio inferior */
+}
+
+/* Reducir el tamaño de la imagen */
+.col-md-4 img {
+    width: 250px;  /* Reduce el ancho de la imagen */
+    height: 250px; /* Reduce la altura de la imagen */
+}
+
+

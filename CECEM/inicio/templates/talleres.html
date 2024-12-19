@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container py-5 d-flex justify-content-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- TEXTO TALLERES -->
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-auto">
+                        <ul class="list-inline shop-top-menu pb-3 pt-1">
+                            <li class="list-inline-item">
+                                <a class="h1 text-dark text-decoration-none text-center">Talleres</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- FIN -->
+
+                <div class="row">
+                    {% for taller in page_obj %}
+                    <div class="col-sm-3" >
+                        <div class="card mb-4 product-wap rounded-0" style="widht: 500px; overflow: hidden;">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="{{ taller.imagen.url }}" alt="{{ taller.nombre }}">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <center><a href="shop-single.html" class="h4 text-decoration-none">{{ taller.nombre }}</a></center>
+                                <p class="text-center">Días: {{ taller.dias }}</p>
+                                <p class="text-center">Horario: {{ taller.horario }}</p>
+                                <p class="text-center">Instructor: {{ taller.instructor }}</p>
+                                <p class="text-center">Contacto: {{ taller.contacto }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Paginación -->
+                <div class="row">
+                    <ul class="pagination pagination-lg justify-content-end">
+                        {% if page_obj.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0" href="?page=1">&laquo; First</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                            </li>
+                        {% endif %}
+                        <li class="page-item disabled">
+                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">{{ page_obj.number }}</a>
+                        </li>
+                        {% if page_obj.has_next %}
+                            <li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0" href="?page={{ page_obj.next_page_number }}">Next</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

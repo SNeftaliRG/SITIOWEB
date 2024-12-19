@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% block content %}
+<body>
+   
+
+    
+    
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Start Banner Hero -->
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel" align="center">
+        <video width="740" height="460" controls autoplay>
+            <source src="{% static 'img/video.mp4' %}" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+        {% comment %} <ol class="carousel-indicators">
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" src="{% static 'img/imagen1.jpg' %}" alt="">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left align-self-center">
+                                <h1 class="h1 text-success"><b>Nuestros Cursos</b> </h1>
+                                <h1 class="h2">Inscribete Ahora</h1>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" src="{% static 'img/imagen2.jpg' %}" alt=""> 
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left">
+                                <h1 class="h1">Clases de Artes Marciales</h1>
+                                <h3 class="h2">Inscribete Ahora</h3>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" src="{% static 'img/imagen3.jpg' %}" alt=""> 
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left">
+                                <h1 class="h1">Curso de Cartoneria</h1>
+                                <h3 class="h2">Inscribete Ahora </h3>
+                                <!-- Start Banner Hero
+                                <p>
+                                    We bring you 100% free CSS templates for your websites. 
+                                    If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+            <i class="fas fa-chevron-right"></i>
+        </a> {% endcomment %}
+    </div>
+    
+
+
+    <!-- Start NUESTROS SERVICIOS -->
+    <section class="container py-5">
+        <div class="row text-center pt-5 pb-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Nuestros Servicios</h1>
+                
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-6 col-lg-4 pb-5">
+                <div class="h-100 py-5 services-icon-wap shadow">
+                    <div class="h1 text-success text-center"><i class="fa fa-paint-brush"></i></div>
+                    <h2 class="h5 mt-4 text-center">Talleres Culturales</h2>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 pb-5">
+                <div class="h-100 py-5 services-icon-wap shadow">
+                    <div class="h1 text-success text-center"><i class="fa fa-graduation-cap" ></i></div>
+                    <h2 class="h5 mt-4 text-center">Certificaciones</h2>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 pb-5">
+                <div class="h-100 py-5 services-icon-wap shadow">
+                    <div class="h1 text-success text-center"><i class="fa fa-heartbeat"></i></div>
+                    <h2 class="h5 mt-4 text-center">Feria de la Salud</h2>
+                </div>
+            </div>
+
+           
+        </div>
+    </section>
+    <!-- End Featured Product -->
+<!-- End Banner Hero -->
+
+
+    <!-- Start Categories of The Month -->
+    <section class="container py-5">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Algunos de Nuestros Talleres</h1>
+              <!--  <p>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="{% static 'img/artesmarciales.jpg' %}" class="rounded-circle img-fluid border" width="300" height="500"></a>
+                <h5 class="text-center mt-3 mb-3">Artes Marciales Polinesias Lima Lama</h5>
+                <p class="text-center"><a class="btn btn-success">Ver más...</a></p>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="{% static 'img/guitarra.jpg' %}" class="rounded-circle img-fluid border" width="300" height="500"></a>
+                <h2 class="h5 text-center mt-3 mb-3">Curso de Guitarra</h2>
+                <p class="text-center"><a class="btn btn-success">Ver más...</a></p>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="{% static 'img/zumba.jpg' %}" class="rounded-circle img-fluid border" width="300" height="500"></a>
+                <h2 class="h5 text-center mt-3 mb-3">Zumba</h2>
+                <p class="text-center"><a class="btn btn-success">Ver más...</a></p>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Categories of The Month -->
+
+    
+    
+</body>
+
+{% endblock %}
+
+
+
+
+</html>
